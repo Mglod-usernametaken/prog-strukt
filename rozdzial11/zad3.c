@@ -12,14 +12,14 @@ return 0;
 int pierwszeslowo(void)
 {
     char tab[100];
-    int i = 0, j=0;
+    int i = 0;
     while (1)
     {
         tab[i] = getchar();
         if (tab[i]==0x20)
         //if (isspace(tab[i]))
         {
-            j=i;
+
             tab[i]= '\0';
             break;
         }
