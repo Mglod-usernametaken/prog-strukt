@@ -1,0 +1,151 @@
+//Marcin Głód, grupa 2, praca domowa rozdział 2,3
+
+// ################################### zadanie 2.2.5 ###################################
+
+#include <stdio.h>
+
+
+int dwadoen (int x)
+{
+	int wynik = 2, i;
+	for (i = 0; i<(x-1); i++)
+	{
+		wynik = wynik * 2;	
+	}
+	return wynik;
+}
+
+int main()
+{
+printf ("%d\n", dwadoen(10));
+
+return 0;	
+}
+
+
+// ###################################  zadanie 2.2.6 ##################################
+
+#include <stdio.h>
+
+
+int iksdoigrek(int x, int y)
+{
+	int wynik = x, i;
+	for (i=0;i<y-1;i++)
+	{
+		wynik = wynik * x;
+	}
+	if (y ==0)
+		wynik = 1;
+	return wynik;
+}
+
+
+int main()
+{
+printf ("%d\n", iksdoigrek(7,8));
+
+return 0;	
+}
+
+// ###################################  zadanie 2.2.21 #################################
+
+#include <stdio.h>
+
+
+int wyraz(int n)
+{
+	if(n==0)
+		return 1;
+	else
+	{
+		return 2* wyraz(n-1)+5;
+	}
+	
+}
+
+
+int main()
+{
+printf ("%d\n", wyraz(20));
+
+return 0;	
+}
+
+// ###################################  zadanie 2.2.33 #################################
+
+// ###################################  zadanie 3.2.4 ##################################
+
+#include <stdio.h>
+
+
+int wyraz(int *x, int *y)
+{
+	int swap;
+	if (*y<*x)
+	{
+		swap = *y;
+		*y = *x;
+		*x = swap;
+	}
+	return 0;
+	
+}
+
+
+int main()
+{
+int x = 5,y = 3;
+
+wyraz(&x,&y);
+
+printf ("%d %d\n",x,y);
+
+return 0;	
+}
+
+// ###################################  zadanie 3.2.5 ##################################
+
+#include <stdio.h>
+
+
+int sum(int *x, int *y)
+{
+	return (*x + *y);
+	
+}
+
+
+int main()
+{
+int x = 5,y = 4;
+
+printf ("%d \n",sum(&x,&y));
+
+return 0;	
+}
+
+// ###################################  zadanie 3.2.6 ##################################
+
+#include <stdio.h>
+
+
+int zamien(int n, int *w)
+{
+
+*w = n;
+
+	return 0;
+	
+}
+
+
+int main()
+{
+int n = 314, w;
+zamien(n, &w);
+
+printf ("%d \n",w);
+
+return 0;	
+}
